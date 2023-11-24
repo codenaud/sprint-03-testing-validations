@@ -19,3 +19,16 @@ function getMoviesFromDirector(director) {
   return result;
 }
 getMoviesFromDirector('Francis Ford Coppola');
+
+// Exercise 3: Calculate the average of the films of a given director.
+function moviesAverageOfDirector(director) {
+  let moviesFromDirector = sampleMovies.filter((movie) => movie.director == director);
+  let totalScore = moviesFromDirector.reduce((accTotal, movie) => accTotal + movie.score, 0);
+  let result = totalScore / moviesFromDirector.length;
+  console.log('EXERCICE 3 ->', result);
+  return result;
+}
+moviesAverageOfDirector('Frank Darabont');
+
+// Exercise 4:  Alphabetic order by title
+function orderAlphabetically() {}
