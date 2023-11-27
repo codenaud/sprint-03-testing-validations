@@ -6,7 +6,7 @@ import { sampleMovies } from './data.js';
 
 // Exercise 1: Get the array of all directors.
 function getAllDirectors() {
-  let result = sampleMovies.map((movie) => movie.director);
+  let result = sampleMovies.map((movie) => movie.year);
   console.log('EXERCICE 1 ->', result);
   return result;
 }
@@ -31,4 +31,38 @@ function moviesAverageOfDirector(director) {
 moviesAverageOfDirector('Frank Darabont');
 
 // Exercise 4:  Alphabetic order by title
-function orderAlphabetically() {}
+function orderAlphabetically() {
+  let result = sampleMovies.reduce(function (allMovies, movie) {
+    return [...allMovies, movie.title].sort().slice(0, 10);
+  }, []);
+  console.log('EXERCICE 4 ->', result);
+  return result;
+}
+orderAlphabetically();
+
+// Exercise 5: Order by year, ascending
+function orderByYear() {
+  let result = sampleMovies.map((movie) => movie.year).sort();
+  console.log('EXERCICE 5 ->', result);
+  return result;
+}
+orderByYear();
+
+// Exercise 5.1 [EXTRA]: Order by year, ascending => all array
+function orderByYear2() {
+  let result = [
+    ...sampleMovies
+      .map((movie) => movie)
+      .sort((a, b) => {
+        // Compara por año
+        if (a.year !== b.year) {
+          return a.year - b.year;
+        } else {
+          return a.title.localeCompare(b.title);
+        }
+      }),
+  ];
+  console.log('EXERCICE 5 ->', result);
+  return result;
+}
+orderByYear2();
