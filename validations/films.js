@@ -6,7 +6,7 @@ import { sampleMovies } from './data.js';
 
 // Exercise 1: Get the array of all directors.
 function getAllDirectors() {
-  let result = sampleMovies.map((movie) => movie.year);
+  let result = sampleMovies.map((movie) => movie);
   console.log('EXERCICE 1 ->', result);
   return result;
 }

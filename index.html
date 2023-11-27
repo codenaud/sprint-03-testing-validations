@@ -1,12 +1,150 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" data-bs-core="modern">
 
-<body>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <h1>Sprint 4 IT ACADEMY</h1>
+    <link rel="stylesheet" href="css/main.min.css">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- importing bootstrap sass & modify
+         https://youtu.be/nCX3QVl_PiI?si=7thT17cAlur1gRcp
+    -->
+
+    <title>Sprint 03: Testing and Validations | It Academy</title>
+
+</head>
+
+<body data-bs-theme="dark">
+    <!-- Switch color theme -->
+
+    <header class="bg-lila">
+        <nav class="navbar navbar-dark navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand fw-bolder" href="#">Validations</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#exercice1">Exercice 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#exercice2">Exercice 2</a>
+                        </li>
+                    </ul>
+                    <div class="form-check form-switch mx-4">
+                        <input class="form-check-input p-2" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked onclick="myFunction()" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container py-5">
+            <div class="p-5 mb-4 bg-body-tertiary rounded-3 lila-gradient text-light" data-bs-theme="dark">
+                <div class=" container-fluid py-5">
+                    <h1 class="display-5 fw-bold">Sprint 03: Testing & Validations</h1>
+                    <p class=" fs-5">In this validation sprint, we focus on implementing functions that must
+                        pass the tests outlined in Sprint 03. This validation sprint is designed for internal use,
+                        providing a hands-on approach to verifying and comprehending the actual results on the console
+                        and screen. We delve into common array methods such as map, reduce, filter, sort, and more.
+                    </p>
+                </div>
+            </div>
+            <!-- Exercice 1 -->
+            <h2 class="mt-4">Exercise 1</h2>
+
+            <p class="text-warning">
+                Get the array of all directors.
+            </p>
+            <button type="button" class="btn lila-gradient mb-3" data-bs-toggle="popover"
+                data-bs-title="Ver Console.log"
+                data-bs-content="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]">See the solution</button>
+
+            <hr class="my-4">
+
+            <!-- Exercice 2 -->
+            <h2 class="mt-4">Exercise 2</h2>
+            <p class="text-warning">
+                Get the films of a certain director
+            </p>
+            <button type="button" class="btn lila-gradient mb-3" data-bs-toggle="popover"
+                data-bs-title="Ver Console.log"
+                data-bs-content="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]">See the solution</button>
+
+            <hr class="my-4">
+
+            <!-- Exercice 3 -->
+            <h2 class="mt-4">Exercise 3</h2>
+            <p class="text-warning">
+                Calculate the average of the films of a given director
+            </p>
+            <button type="button" class="btn lila-gradient mb-3" data-bs-toggle="popover"
+                data-bs-title="Ver Console.log"
+                data-bs-content="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]">See the solution</button>
+
+            <hr class="my-4">
+
+            <!-- Exercice 4 -->
+            <h2 class="mt-4">Exercise 4</h2>
+            <p class="text-warning">
+                Alphabetic order by title
+            </p>
+            <button type="button" class="btn lila-gradient mb-3" data-bs-toggle="popover"
+                data-bs-title="Ver Console.log"
+                data-bs-content="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]">See the solution</button>
+
+            <hr class="my-4">
+
+            <!-- Exercice 5 -->
+            <h2 class="mt-4">Exercise 5</h2>
+            <p class="text-warning">
+                Order by year, ascending
+            </p>
+            <button type="button" class="btn lila-gradient mb-3" data-bs-toggle="popover"
+                data-bs-title="Ver Console.log"
+                data-bs-content="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]">See the solution</button>
+
+            <hr class="my-4">
+
+            <!-- Exercice 5.1 -->
+            <h2 class="mt-4">Exercise 5.1</h2>
+            <p class="text-warning">
+                [EXTRA]: Order by year, ascending => all array
+            </p>
+            <button type="button" class="btn lila-gradient mb-3" data-bs-toggle="popover"
+                data-bs-title="Ver Console.log"
+                data-bs-content="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]">See the solution</button>
+
+            <hr class="my-4">
+        </section>
+    </main>
+
+
+    <!-- Validation JS -->
     <script type="module" src="validations/films.js"></script>
     <script type="module" src="validations/data.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+
+
+
+
 </body>
 
 </html>
