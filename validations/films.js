@@ -106,23 +106,74 @@ function moviesByCategory(genre) {
   console.log('EXERCISE 6.1 ->', result);
   return result;
 }
-
 moviesByCategory('Crime');
 
-// Exercice 6.2: Get de score of a category
-// Exercise 6.1: Get the films of a certain category
-function scoreOFCategory(genre) {
+// Exercice 6: Calculate the average of the movies in a category
+function moviesAverageByCategory(genre) {
   let filteredMoviesByCategory = movies.filter((movie) => movie.genre.includes(genre));
-  if (filteredMoviesByCategory.length === 0) {
-    // Return NaN if there are no movies from the director
-    return NaN;
-  }
-
   let totalScore = filteredMoviesByCategory.reduce((accTotal, movie) => accTotal + movie.score, 0);
   let averageScore = totalScore / filteredMoviesByCategory.length;
   let result = averageScore.toFixed(2);
   console.log('EXERCICE 6.2 ->', result);
   return result;
 }
+moviesAverageByCategory('Crime');
 
-scoreOFCategory('Crime');
+// Exercise 7: Modify the duration of movies to minutes
+function hoursToMinutes() {
+  // Utilize map to create a new array without modifying the original
+  let result = movies.map((movie) => {
+    // Create a copy of the movie object to avoid modifying the original
+    const newMovie = { ...movie };
+
+    // Extract hours and minutes from the duration property using a regular expression
+    const match = newMovie.duration.match(/(\d+)\s*h(?:\s*(\d+)\s*min)?/);
+
+    if (match) {
+      // Convert hours and minutes to integer values
+      const hours = parseInt(match[1], 10) || 0;
+      const minutes = parseInt(match[2], 10) || 0;
+
+      // Calculate total minutes considering durations exceeding 60 minutes
+      const totalMinutes = hours * 60 + minutes;
+      if (minutes > 60) {
+        const extraHours = Math.floor(minutes / 60);
+        totalMinutes += extraHours;
+      }
+
+      // Update the "duration" property in the movie copy
+      newMovie.duration = totalMinutes;
+
+      return newMovie;
+    } else {
+      // Handle invalid or incorrect format
+      console.error(`Invalid time format for movie "${newMovie.title}"`);
+      return newMovie;
+    }
+  });
+
+  console.log('EXERCISE 7 ->', result);
+  return result;
+}
+hoursToMinutes();
+
+// Exercise 8: Get the best film of a year
+function bestFilmOfYear(year) {
+  let moviesByYear = movies.filter((movie) => movie.year == year);
+
+  // Check if there are no movies for the given year
+  if (moviesByYear.length === 0) {
+    console.error(`No movies found for the year ${year}`);
+    return null;
+  }
+
+  // Ordenar películas por puntuación de forma descendente
+  let scoreSortedMoviesbyYear = moviesByYear.sort((a, b) => b.score - a.score);
+
+  // Tomar la primera película (la de mayor puntuación)
+  let result = scoreSortedMoviesbyYear[0];
+
+  console.log('EXERCISE 8 ->', result);
+  return result; // Devolver el objeto de película directamente
+}
+bestFilmOfYear(1994);
