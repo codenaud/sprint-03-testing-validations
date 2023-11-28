@@ -2001,8 +2001,8 @@ const movies = [
   },
 ];
 
-/* // exportar todas las películas
-export default movies; */
+// exportar todas las películas
+export default movies.slice(0, 20);
 
-// exportamos tan solo 20 películas
-export const sampleMovies = movies.slice(0, 20);
+/* // exportamos tan solo 20 películas
+export const sampleMovies = movies.slice(0, 20); */
