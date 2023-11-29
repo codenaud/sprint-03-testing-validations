@@ -30,10 +30,6 @@ Dev Skills
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-Build with
-
-![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
-
 ## About Me
 
 I'm a junior frontend developer passionate about creating engaging and functional web applications. This project showcases my skills in HTML, CSS, and JavaScript.
