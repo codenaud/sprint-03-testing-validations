@@ -1,5 +1,7 @@
 # Sprint 03: Testing and Validations
 
+[![Testing and Validations](assets/images/git-screenshot.png)](https://codenaud.github.io/sprint-03-testing-validations/)
+
 ## Description
 
 Welcome to Sprint 03: Testing and Validations! This repository focuses on validating JavaScript functions to pass the tests outlined in Sprint 3. The primary goal is to test and ensure the accuracy and reliability of common array methods like map, filter, reduce, find, and more. By rigorously testing these functions, we aim to strengthen the codebase and enhance the overall quality of the JavaScript implementation.
